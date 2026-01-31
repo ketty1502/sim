@@ -1,0 +1,241 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Reasons Why I Love You, [Her Name]</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #2d1b69 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #1f2937;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #db2777;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #6b7280;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+        
+        .reason-box {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .reason-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        #reason-text {
+            font-size: 2rem;
+            line-height: 1.4;
+            color: #111827;
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .heart-btn {
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(219, 39, 119, 0.3);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .heart-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(219, 39, 119, 0.4);
+        }
+        
+        .counter {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: #9ca3af;
+        }
+        
+        .heart-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f472b6;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            5% { transform: scale(1.1); }
+            10% { transform: scale(1); }
+            15% { transform: scale(1.1); }
+            20% { transform: scale(1); }
+        }
+        
+        /* For mobile */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            #reason-text { font-size: 1.6rem; padding: 0 10px; }
+            .reason-box { padding: 40px 20px; min-height: 250px; }
+            .heart-btn { padding: 15px 35px; font-size: 1.1rem; }
+        }
+    </style>
+    <link href="
+https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap
+" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="heart-icon">❤️</div>
+        <h1>For Simone✌🏻😸</h1>
+        <p class="subtitle">Click the heart dawg</p>
+        
+        <div class="reason-box">
+            <p id="reason-text">lowkey click ittt</p>
+        </div>
+        
+        <button class="heart-btn" id="newReasonBtn">
+            ❤️ Show Me Another Reason
+        </button>
+        
+        <div class="counter">
+            Reason #<span id="counter">0</span> of ∞
+        </div>
+    </div>
+    <script>
+        // YOUR REASONS GO HERE - Add as many as you want!
+        const reasons = [
+            "The way your eyes light up when you talk about your passions (and hickeys)",
+            "How you make even ordinary moments feel special(retard level😸)",
+            "Your incredible kindness to everyone around you",
+            "The sound of your laughter fire ringtone",
+            "How you challenge me to be a better person",
+            "The way you snuggle into my shoulder when you're sleepy",
+            "Your intelligence and curiosity about the world",
+            "How you remember little details about the goat",
+            "The way you smile when i compliment u",
+            "Your strength in facing challenges with grace (L abuse W simone)",
+            "How you make me feel completely accepted as I am",
+            "The little kisses you give me",
+            "Your dogshit jokes that we still laugh to",
+            "The way you care for animals and children",
+            "How you do makeup so nice",
+            "Your crochet skills",
+            "The way you build me up when I'm doubting myself",
+            "How you always try to see the best in people",
+            "Your excitement over small pleasures",
+            "The way you say my name",
+            "How you hold my hand when we walk together",
+            "Your commitment to your values and beliefs",
+            "The way you look at me like I'm the only person in the room",
+            "How you've changed my life for the better",
+            "Your ability to make love anywhere",
+            "The face you make when you're concentrating",
+            "How you forgive quickly (✌🏻😬) and love deeply",
+            "Yo fashion sense fire",
+            "dat puh tight",
+            "how youre both my girlfriend and my best friend",
+            
+        ];
+        // Shuffle the reasons for variety
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+        // Initialize
+        let shuffledReasons = shuffleArray([...reasons]);
+        let currentIndex = 0;
+        let totalClicks = 0;
+        const reasonText = document.getElementById('reason-text');
+        const counterElement = document.getElementById('counter');
+        const button = document.getElementById('newReasonBtn');
+        // Function to display next reason
+        function showNextReason() {
+            // If we've gone through all reasons, reshuffle
+            if (currentIndex >= shuffledReasons.length) {
+                shuffledReasons = shuffleArray([...reasons]);
+                currentIndex = 0;
+            }
+            
+            // Fade out current reason
+            reasonText.style.animation = 'none';
+            void reasonText.offsetWidth; // Trigger reflow
+            reasonText.style.animation = 'fadeIn 0.8s ease forwards';
+            
+            // Update text
+            reasonText.textContent = shuffledReasons[currentIndex];
+            
+            // Update counter
+            totalClicks++;
+            counterElement.textContent = totalClicks;
+            
+            // Move to next reason
+            currentIndex++;
+            
+            // Special surprise every 10 reasons
+            if (totalClicks % 10 === 0) {
+                reasonText.innerHTML = shuffledReasons[currentIndex - 1] + '<br><br><em style="color:#db2777;font-size:1.2rem">And this is just one of infinite reasons...</em>';
+            }
+        }
+        // Add click event to button
+        button.addEventListener('click', showNextReason);
+        
+        // Also allow spacebar/enter to show next reason
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' || e.code === 'Enter') {
+                e.preventDefault();
+                showNextReason();
+            }
+        });
+        // Initialize with first reason
+        showNextReason();
+    </script>
+</body>
+</html>
